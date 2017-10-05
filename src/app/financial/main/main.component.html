@@ -1,0 +1,81 @@
+<mat-toolbar class="app-toolbar" color="primary">
+  <button mat-icon-button [toolbarButton] (click)="sidenav.toggle()">
+    <mat-icon>subject</mat-icon>
+  </button>
+  <img class="toolbar-logo" alt="Home" title="Home" src={{logoSrc}}>
+  <span>{{title}}</span>
+  <span class="fill-remaining-space"></span>
+  <span>{{isLive}}</span>
+  <button mat-icon-button [toolbarButton] (click)="sidenavRight.toggle()">
+    <mat-icon>face</mat-icon>
+  </button>
+  <button mat-button (click)="Logout()">
+    <mat-icon>input</mat-icon>
+  </button>
+</mat-toolbar>
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav align="end" #sidenavRight class="sidenavRight">
+    <mat-toolbar>
+      <span>Login info</span>
+      <span><mat-icon>verified_user</mat-icon></span>
+    </mat-toolbar>
+    <mat-list>
+      <mat-list-item class="l-sub-section">
+        <mat-icon>code</mat-icon>
+        {{userInfoDatas.USER_ID}}
+      </mat-list-item>
+      <mat-list-item class="l-sub-section">
+        <mat-icon>account_circle</mat-icon>
+        {{userInfoDatas.USR_NAME}}
+      </mat-list-item>
+      <mat-list-item class="l-sub-section">
+        <mat-icon>account_balance</mat-icon>
+        {{userInfoDatas.DIVISION}}
+      </mat-list-item>
+      <mat-list-item class="l-sub-section">
+        <mat-icon>phone</mat-icon>
+        <input matInput placeholder="Required" type="text" [(ngModel)]="userInfoDatas.EXTEN_NO" required>
+        {{userInfoDatas.EXTEN_NO}}
+      </mat-list-item>
+      <mat-list-item class="l-sub-section">
+        <mat-icon>email</mat-icon>
+        {{userInfoDatas.EMAIL}}
+      </mat-list-item>
+    </mat-list>
+    <div>
+      <kendo-calendar></kendo-calendar>
+    </div>
+
+  </mat-sidenav>
+
+</mat-sidenav-container>
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav class="sidenav sidebar-panel" #sidenav mode="sidenavMode" opened="sidenavOpen">
+
+
+    <mat-nav-list appAccordion class="navigation">
+      <mat-list-item appAccordionLink *ngFor="let data of sideNavDatas" group="{{ data.catogory }}">
+        <a appAccordionToggle class="relative" mat-ripple href="javascript:;">
+          <mat-icon>equalizer</mat-icon>
+          <span>{{data.catogory}}</span>
+          <span fxFlex></span>
+          <mat-icon class="menu-caret">arrow_drop_down</mat-icon>
+        </a>
+        <mat-nav-list class="sub-menu">
+          <mat-list-item *ngFor="let item of data.program" routerLinkActive="open">
+            <a routerLink='{{item.modulePath +"/"+ item.pg + "." + item.id }}' class="relative" mat-ripple (click)="menuItemEvent(item)">
+              {{item.pg}} {{item.text.replace(item.pg,'')}}
+            </a>
+          </mat-list-item>
+        </mat-nav-list>
+      </mat-list-item>
+    </mat-nav-list>
+
+  </mat-sidenav>
+  <section role="content" class="sidenav-content">
+
+    <div [@routeAnimation]="prepRouteState(routerOutlet)">
+      <router-outlet #routerOutlet="outlet"></router-outlet>
+    </div>
+  </section>
+</mat-sidenav-container>

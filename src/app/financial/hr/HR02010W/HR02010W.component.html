@@ -1,0 +1,70 @@
+<div *ngIf="switchedit">
+  <p> {{employeeview.stockOptionEmployee.EMPLOYEE_NAME}} 同仁您好:</p>
+  <p>為持續落實多元化、績效導向之獎酬制度，本公司規劃了『現金增資計劃』，讓同仁成為公司的股東。在共創股東價值的前提下，凝聚共同的努力方向，創造公司績效的優異表現。</p>
+  <p>為統計本次現金增資作業<strong>保留員工認股</strong>股數，請您於 <span style="color:#1E90FF;">{{employeeview.stockOption.EXPIRE_DATE | date:'y'}}年{{employeeview.stockOption.EXPIRE_DATE | date:'M'}}月{{employeeview.stockOption.EXPIRE_DATE | date:'d'}}日 </span>下班前回覆您的認購意願，如有認購意願者，請一併提供股票撥入之集保帳戶資訊。</p>
+  <P>無論您是否願意認購，請務必於上述期限內回覆，以利後續作業之進行。若未依期限回覆，則視同放棄本次認購權利。</P>
+  <P>本次您可認購股數為 <span style="text-decoration:underline;color:red;">{{employeeview.stockOptionEmployee.CAN_SHARE_NUMBER}}股</span>，總認購金額為新台幣
+    <span style="text-decoration:underline;color:red;"> {{employeeview.stockOptionEmployee.CAN_SHARE_NUMBER * employeeview.stockOption.UNIT_PRICE }} </span>    元（每股認購價格為新台幣 <span style="text-decoration:underline;color:red;"> {{employeeview.stockOption.UNIT_PRICE}} </span>元 ），請勾選以下選項，以便確認您的認購意願：</P>
+
+  <mat-radio-group class="example-radio-group" [(ngModel)]="stockoption">
+    <!-- <mat-radio-button class="example-radio-button" *ngFor="let option of options"  [checked]="option.id === 1"  (click)="show(option.id, option.text)"  [value]="option"  > -->
+    <mat-radio-button class="example-radio-button" *ngFor="let option of options" [value]="option">
+      {{option.text}}
+    </mat-radio-button>
+  </mat-radio-group>
+
+  <!-- <div class="example-selected-value">{{stockoption.id}}/{{stockoption.text}}</div> -->
+
+  <div *ngIf="stockoption.id == 2">
+    <mat-card>
+      <td>本人同意部分認購，擬認購
+        <mat-form-field [ngStyle]="{'width':'40px'}">
+          <input type="number" matInput [(ngModel)]="buystock" required min=1 max={{buystockfix}} #buystockRef="ngModel" (ngModelChange)="valuechange($event)"
+            onkeypress='return event.charCode >= 48 && event.charCode <= 57'>
+        </mat-form-field>
+        仟股 (
+        <={{buystockfix}} )，總認購金額為<span style="color: red;text-decoration:underline">{{buystock*(employeeview.stockOption.UNIT_PRICE*1000)}}</span>元。 </td>
+      <!-- <div>
+        總認購金額: {{stocktotalamtpart}}.
+      </div> -->
+      <!-- <div  *ngIf ="buystockRef.errors && (buystockRef.dirty || buystockRef.touched)" class="alert alert-danger">
+        <div [hidden]="!buystockRef.errors.max">
+            輸入股數大於部分認購最大千股數。
+        </div>
+        <div [hidden]="!buystockRef.errors.min">
+            輸入股數小於 1 千股。
+        </div>
+      </div> -->
+
+    </mat-card>
+  </div>
+
+  <div *ngIf="stockoption.id == 3">
+    <button [disabled]="userProfile.checkexpiredate()"  mat-raised-button (click)="confirm1()">送出</button>
+  </div>
+
+  <div *ngIf="(stockoption.id == 1) ||(stockoption.id == 2) ">
+    <button mat-raised-button (click)=buyflag()>下一步</button>
+  </div>
+</div>
+
+
+<div [hidden]="switchedit">
+  <app-hr02010w-edit [data]="employeeview" (result)="ngOnChange($event)"></app-hr02010w-edit>
+</div>
+<kendo-dialog title="認股確認原則，請同仁務必詳細閱讀" *ngIf="opened">
+  <h5 style="margin: 30px; text-align: left;">
+    <ol>
+      <li>填寫完畢後請按送出鍵，系統將會寄發確認信至員工電子郵件信箱，同仁收信後點選確認即完成調查</li>
+      <br>
+      <li>若於調查時間截止前未進入系統填寫並完成第1點之確認程序，即視同放棄認股權利</li>
+      <br>
+      <li>在調查時間截止前，同仁可再度進入系統更改資料，完成第1點之確認程序後，系統便會更新認股資料</li>
+      <br>
+      <li>若修改資料後未完成第1點之確認程序，則系統將以最近一次完成確認程序之資料為準</li>
+    </ol>
+  </h5>
+  <kendo-dialog-actions>
+    <button kendoButton (click)="closed()" [primary]="true">我確認</button>
+  </kendo-dialog-actions>
+</kendo-dialog>

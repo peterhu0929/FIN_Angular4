@@ -1,0 +1,15 @@
+{
+  "/api/Authentication": "/Authentication",
+  "/api/Authentication?module=ILIS&userId=jennivine.cy.chen&password=jennivine.cy.chen": "/Authentication/1",
+  "/api/User?userID=jennivine.cy.chen": "/User/1",
+  "/api/UserMenu?userId=JENNIVINE.CY.CHEN&module=ILIS": "/UserMenu/1",
+  "/api/I18n?lang=en-US": "/I18n/1",
+  "/api/I18n?lang=zh-TW": "/I18n/2",
+  "/api/StockOption/2": "/StockOption/2",
+  "/api/StockOption/1": "/StockOption/1",
+  "/api/StockOptionEmployee/GridRead?page=1&pageSize=10&filter=F_KEY_NO~eq~1&$count=true": "/StockOptionEmployee",
+  "/api/StockOption/GridRead?page=1&pageSize=10&$count=true": "/StockOption",
+  "/api/StockOptionEmployee/GridRead?$count=true": "/StockOptionEmployee",
+  "/api/StockOptionEmployee/SendReminderEmail":"/SendReminderEmail",
+  "/api/StockOptionEmployee/SendOpenEmail":"/SendOpenEmail"
+}

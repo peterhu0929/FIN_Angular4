@@ -1,0 +1,66 @@
+<div style="text-align:left">
+  <button mat-raised-button (click)="send()" color="primary" [ngStyle]="{'margin': '20px'}">發送員工認股通知信</button>
+</div>
+<mat-card>
+  <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+    <mat-card-title>
+      <label>{{'STOCK_OPTION_YEAR'|i18n}}</label>
+    </mat-card-title>
+    <mat-card-content>
+      <mat-input-container>
+        <input matInput [(ngModel)]="stockoptions.STOCK_OPTION_YEAR" required>
+      </mat-input-container>
+      <mat-card-title>
+        <label>{{'STOCK_OPTION_NAME'|i18n}}</label>
+      </mat-card-title>
+      <mat-input-container>
+        <input matInput [(ngModel)]="stockoptions.STOCK_OPTION_NAME" required>
+      </mat-input-container>
+      <mat-card-title>
+        <label>{{'REPLY_DATE'|i18n}}</label>
+      </mat-card-title>
+      <mat-input-container>
+        <input matInput [matDatepicker]="REPLY_DATEpicker" [(ngModel)]="stockoptions.REPLY_DATE">
+        <mat-datepicker-toggle matSuffix [for]="REPLY_DATEpicker"></mat-datepicker-toggle>
+        <mat-datepicker #REPLY_DATEpicker></mat-datepicker>
+      </mat-input-container>
+      <mat-card-title>
+        <label> {{'UnitPrice' |i18n}}</label>
+      </mat-card-title>
+      <mat-input-container>
+        <input matInput [(ngModel)]="stockoptions.UNIT_PRICE" type="number" style="text-align:right" step=0.01 required>
+      </mat-input-container>
+    </mat-card-content>
+  </div>
+  <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+    <mat-card-title>
+      <label>{{'PAYMENT_PERIOD_FROM'|i18n}}</label>
+    </mat-card-title>
+    <mat-card-content>
+      <mat-form-field>
+        <input matInput [matDatepicker]="PAYMENT_PERIOD_FROMpicker" [(ngModel)]="stockoptions.PAYMENT_PERIOD_FROM">
+        <mat-datepicker-toggle matSuffix [for]="PAYMENT_PERIOD_FROMpicker"></mat-datepicker-toggle>
+        <mat-datepicker #PAYMENT_PERIOD_FROMpicker></mat-datepicker>
+      </mat-form-field>
+      <mat-card-title>
+        <label>{{'PAYMENT_PERIOD_TO'|i18n}}</label>
+      </mat-card-title>
+      <mat-form-field>
+        <input matInput [matDatepicker]="PAYMENT_PERIOD_TOpicker" [(ngModel)]="stockoptions.PAYMENT_PERIOD_TO">
+        <mat-datepicker-toggle matSuffix [for]="PAYMENT_PERIOD_TOpicker"></mat-datepicker-toggle>
+        <mat-datepicker #PAYMENT_PERIOD_TOpicker></mat-datepicker>
+      </mat-form-field>
+      <mat-card-title>
+        <label>{{'EXPIRE_DATE'|i18n}}</label>
+      </mat-card-title>
+      <mat-form-field>
+        <input matInput [matDatepicker]="EXPIRE_DATEpicker" [(ngModel)]="stockoptions.EXPIRE_DATE">
+        <mat-datepicker-toggle matSuffix [for]="EXPIRE_DATEpicker"></mat-datepicker-toggle>
+        <mat-datepicker #EXPIRE_DATEpicker></mat-datepicker>
+      </mat-form-field>
+    </mat-card-content>
+  </div>
+  <div style="text-align:right">
+    <button mat-raised-button (click)="confirm()" color="primary" [ngStyle]="{'margin': '20px'}">確認</button>
+  </div>
+</mat-card>

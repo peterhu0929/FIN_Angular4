@@ -1,0 +1,50 @@
+<div layout="column" layout-fill>
+  <img class="login-logo" src="../../../assets/icon/Yang_Ming_Line.svg" align="left">
+  <div layout-padding flex>
+    <div class="w3-container w3-animate-opacity" layout-align-gt-xs="center">
+      <div class=" login-box">
+        <div class="section">
+          <mat-card style="opacity:0.85;">
+            <mat-card-title>
+              Login
+            </mat-card-title>
+            <mat-card-subtitle>
+              Sign in your Yangming ILIS
+            </mat-card-subtitle>
+            <mat-card-content>
+              <div layout="row">
+                <mat-input-container class="full-width">
+                  <input matInput placeholder="ID" type="text" maxlength="30" style="text-transform:uppercase" name="username" [(ngModel)]="username" required>
+                  <mat-icon matSuffix>person</mat-icon>
+                </mat-input-container>
+              </div>
+              <div layout="row">
+                <mat-input-container class="full-width">
+                  <input matInput placeholder="Password" type="password" [(ngModel)]="password"  name="password"  (keyup.enter)="Login()"  required>
+                  <span matSuffix><mat-icon>lock</mat-icon></span>
+                </mat-input-container>
+              </div>
+              <div layout="row">
+                <span><mat-icon>view_module</mat-icon></span>
+                <mat-select placeholder="Moudle" [(ngModel)]="moudle">
+                  <mat-option *ngFor="let m of sysMoudles" value="{{m.code}}">{{m.name}} </mat-option>
+                </mat-select>
+              </div>
+              <mat-card-subtitle>
+                {{message}}
+              </mat-card-subtitle>
+              <mat-card-actions layout="row">
+                <button mat-raised-button color="accent" (click)="Login()">Sign In
+                </button>
+                <!--<div [ngBusy]="{busy: busy, message: 'Loading...', backdrop: true, delay: 0, minDuration: 600}"></div>-->
+              </mat-card-actions>
+            </mat-card-content>
+          </mat-card>
+          <h6 align="center" style="color:white;">Copyright © 2017 YANG MING Group. All Rights Reserved.</h6>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+

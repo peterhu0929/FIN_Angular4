@@ -1,0 +1,11 @@
+{
+  "/api/posts": "/posts",
+  "/api/posts/:id": "/posts/:id",
+  "/api/Authentication": "/Authentication",
+  "/api/Authentication?module=ILIS&userId=jennivine.cy.chen&password=jennivine.cy.chen": "/Authentication/1",
+  "/api/User?userID=jennivine.cy.chen": "/User/1",
+  "/api/UserMenu?userId=JENNIVINE.CY.CHEN&module=ILIS": "/UserMenu/1",
+  "/api/StockOptionEmployee?id=B222890360": "/StockOptionEmployee/1",
+  "/api/StockOptionEmployee": "/StockOptionEmployee/2",
+  "/api/StockOption/1": "/StockOption/1"
+}

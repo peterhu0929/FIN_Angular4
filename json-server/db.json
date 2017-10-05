@@ -1,0 +1,640 @@
+{
+  "Authentication": [{
+    "id": 1,
+    "isSuccess": true,
+    "data": {
+      "authenticationType": "Bearer",
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJpdGdmQHlhbmdtaW5nLmNvbSIsImV4cCI6InltbGl0Z2YxISJ9.rzG7p6uYTqHtswb_V4zromLQS82duMHYxbvTIsJ20l4",
+      "module": "ILIS"
+    },
+    "status": 0.0,
+    "message": "使用者認證成功",
+    "messages": null,
+    "table": "AuthenticationController.Authenticate",
+    "exception": null
+  }],
+  "User": [{
+    "id": 1,
+    "isSuccess": true,
+    "data": {
+      "user": {
+        "USER_ID": "JENNIVINE.CY.CHEN",
+        "USR_NAME": "Jennivine Chen 陳君怡",
+        "PASSWORD": "NIL///",
+        "OFFICE_ID": 301,
+        "DIVISION": "FATM",
+        "CNT_NO": null,
+        "EXTEN_NO": null,
+        "EMAIL": "jennivine.cy.chen@yangming.com",
+        "SYS_MANAGER": null,
+        "LOOP_CREATE": null,
+        "OFC_MANAGER": null,
+        "DIV_MANAGER": null,
+        "IN_USER": "CHRISL",
+        "IN_DATE": "2015-07-07T14:24:12",
+        "UP_USER": null,
+        "UP_DATE": "2017-04-24T11:36:46",
+        "LINE_CREATE": null,
+        "DELETE_YN": "N",
+        "FAX_NO": null,
+        "LAST_LOG_DATE": "2017-08-18T19:26:04",
+        "CHANGE_PASSWORD_DATE": "2017-08-09T11:56:13",
+        "ESCAPE": null,
+        "EMAIL_YN": null,
+        "USER_KEY": 12345
+      }
+    },
+    "status": 0,
+    "message": "OK",
+    "messages": null,
+    "table": "UserController.GetUserInformations",
+    "exception": null
+  }],
+  "UserMenu": [{
+    "id": 1,
+    "isSuccess": true,
+    "data": {
+      "menu": [{
+          "idx": 100.0,
+          "moduleid": 561.0,
+          "moduleName": "基本設定",
+          "icon": "OPTION.SVG",
+          "function": [{
+            "catogory": "主檔維護",
+            "id": 562.0,
+            "idx": 10.0,
+            "icon": "ASSET.svg",
+            "program": [{
+              "id": 4433.0,
+              "idx": 7.0,
+              "text": "印表機設定",
+              "pg": "DD00003W",
+              "node": null,
+              "icon": "ASSET.svg",
+              "type": "M"
+            }]
+          }]
+        },
+        {
+          "idx": 200.0,
+          "moduleid": 4.0,
+          "moduleName": "零星傳票",
+          "icon": "ASSET.svg",
+          "function": [{
+            "catogory": "綜合查詢",
+            "id": 304.0,
+            "idx": 40.0,
+            "icon": "ASSET.svg",
+            "program": [{
+                "id": 2035.0,
+                "idx": 60.0,
+                "text": "零星傳票歸檔作業查詢",
+                "pg": "VU31020W",
+                "node": null,
+                "icon": "ASSET.svg",
+                "type": "W"
+              },
+              {
+                "id": 305.0,
+                "idx": 60.0,
+                "text": "已開立之現金及零星轉帳傳票",
+                "pg": "VU31010W",
+                "node": null,
+                "icon": "ASSET.svg",
+                "type": "W"
+              }
+            ]
+          }]
+        },
+        {
+          "idx": 500.0,
+          "moduleid": 399.0,
+          "moduleName": "應付管理",
+          "icon": "ASSET.svg",
+          "function": [{
+            "catogory": "Voucher Management",
+            "id": 403.0,
+            "idx": 30.0,
+            "icon": "ASSET.svg",
+            "program": [{
+                "id": 421.0,
+                "idx": 2.0,
+                "text": "應付憑單之未達帳",
+                "pg": "VP31020W",
+                "node": null,
+                "icon": "ASSET.svg",
+                "type": "W"
+              },
+              {
+                "id": 427.0,
+                "idx": 8.0,
+                "text": "應付憑單開立傳票明細表",
+                "pg": "VP31080W",
+                "node": null,
+                "icon": "ASSET.svg",
+                "type": "W"
+              }
+            ]
+          }]
+        },
+        {
+          "idx": 600.0,
+          "moduleid": 2.0,
+          "moduleName": "現金管理",
+          "icon": "ASSET.svg",
+          "function": [{
+              "catogory": "租金與發票開立管理作業",
+              "id": 1453.0,
+              "idx": 30.0,
+              "icon": "ASSET.svg",
+              "program": [{
+                  "id": 4353.0,
+                  "idx": 8.0,
+                  "text": "CM92100W-租金發票明細表",
+                  "pg": "CM92100W",
+                  "node": null,
+                  "icon": "ASSET.svg",
+                  "type": "M"
+                },
+                {
+                  "id": 2134.0,
+                  "idx": 1.0,
+                  "text": "租金發票明細表",
+                  "pg": "CM92100W",
+                  "node": null,
+                  "icon": "ASSET.svg",
+                  "type": "W"
+                }
+              ]
+            },
+            {
+              "catogory": "主檔維護",
+              "id": 12.0,
+              "idx": 10.0,
+              "icon": "ASSET.svg",
+              "program": [{
+                  "id": 3773.0,
+                  "idx": 2.0,
+                  "text": "查詢廠商與受款人",
+                  "pg": "CM11010W",
+                  "node": null,
+                  "icon": "ASSET.svg",
+                  "type": "M"
+                },
+                {
+                  "id": 3894.0,
+                  "idx": 2.0,
+                  "text": "員工ILIS帳號查詢",
+                  "pg": "CM11012W",
+                  "node": null,
+                  "icon": "ASSET.svg",
+                  "type": "M"
+                },
+                {
+                  "id": 5138.0,
+                  "idx": 8.0,
+                  "text": "銀行代碼機構查詢",
+                  "pg": "CM11013W",
+                  "node": null,
+                  "icon": "ASSET.svg",
+                  "type": "M"
+                }
+              ]
+            },
+            {
+              "catogory": "銀行帳戶管理",
+              "id": 614.0,
+              "idx": 30.0,
+              "icon": "ASSET.svg",
+              "program": [{
+                "id": 24.0,
+                "idx": 60.0,
+                "text": "現金明細帳",
+                "pg": "CM31030W",
+                "node": null,
+                "icon": "ASSET.svg",
+                "type": "W"
+              }]
+            }
+          ]
+        },
+        {
+          "idx": 700.0,
+          "moduleid": 526.0,
+          "moduleName": "SGA管理",
+          "icon": "ASSET.svg",
+          "function": [{
+            "catogory": "Disbursement Management",
+            "id": 531.0,
+            "idx": 50.0,
+            "icon": "ASSET.svg",
+            "program": [{
+              "id": 1134.0,
+              "idx": 590.0,
+              "text": "Voucher Detail Query",
+              "pg": "DA51050W",
+              "node": null,
+              "icon": "ASSET.svg",
+              "type": "W"
+            }]
+          }]
+        },
+        {
+          "idx": 900.0,
+          "moduleid": 181.0,
+          "moduleName": "固定資產",
+          "icon": "ASSET.svg",
+          "function": [{
+            "catogory": "投資性不動產作業",
+            "id": 3533.0,
+            "idx": 70.0,
+            "icon": "ASSET.svg",
+            "program": [{
+              "id": 3573.0,
+              "idx": 40.0,
+              "text": "財稅差異調節資訊",
+              "pg": "AS20010W",
+              "node": null,
+              "icon": "ASSET.svg",
+              "type": "W"
+            }]
+          }]
+        },
+        {
+          "idx": 1350.0,
+          "moduleid": 429.0,
+          "moduleName": "發票管理",
+          "icon": "ASSET.svg",
+          "function": [{
+              "catogory": "Invoice Maintenance",
+              "id": 431.0,
+              "idx": 20.0,
+              "icon": "ASSET.svg",
+              "program": [{
+                  "id": 4933.0,
+                  "idx": 8.0,
+                  "text": "IV21010W-二.三聯式發票(銷項)",
+                  "pg": "IV21010W",
+                  "node": null,
+                  "icon": "ASSET.svg",
+                  "type": "M",
+                  "modulePath": "invo"
+                },
+                {
+                  "id": 4173.0,
+                  "idx": 8.0,
+                  "text": "IV21090W-電子發票折讓單建立",
+                  "pg": "IV21090W",
+                  "node": null,
+                  "icon": "ASSET.svg",
+                  "type": "M",
+                  "modulePath": "invo"
+                },
+                {
+                  "id": 4833.0,
+                  "idx": 8.0,
+                  "text": "IV21100W-大平台回傳結果查詢",
+                  "pg": "IV21100W",
+                  "node": null,
+                  "icon": "ASSET.svg",
+                  "type": "M",
+                  "modulePath": "invo"
+                },
+                {
+                  "id": 4613.0,
+                  "idx": 8.0,
+                  "text": "IV21085W-列印電子發票",
+                  "pg": "IV21085W",
+                  "node": null,
+                  "icon": "ASSET.svg",
+                  "type": "M",
+                  "modulePath": "invo"
+                },
+                {
+                  "id": 4616.0,
+                  "idx": 8.0,
+                  "text": "IV21080W-上傳財政部大平台",
+                  "pg": "IV21080W",
+                  "node": null,
+                  "icon": "ASSET.svg",
+                  "type": "M",
+                  "modulePath": "invo"
+                },
+                {
+                  "id": 2614.0,
+                  "idx": 7.0,
+                  "text": "IV21070W-查詢/下載 04200199.T02",
+                  "pg": "IV21070W",
+                  "node": null,
+                  "icon": "ASSET.svg",
+                  "type": "M",
+                  "modulePath": "invo"
+                },
+                {
+                  "id": 4313.0,
+                  "idx": 3.0,
+                  "text": "IV21050W-進銷項媒體申報txt檔",
+                  "pg": "IV21050W",
+                  "node": null,
+                  "icon": "ASSET.svg",
+                  "type": "M",
+                  "modulePath": "invo"
+                },
+                {
+                  "id": 449.0,
+                  "idx": 6.0,
+                  "text": "IV21060W-台營部銷項發票",
+                  "pg": "IV21060W",
+                  "node": null,
+                  "icon": "ASSET.svg",
+                  "type": "M",
+                  "modulePath": "invo"
+                }
+              ]
+            },
+            {
+              "catogory": "Basic Setup",
+              "id": 430.0,
+              "idx": 10.0,
+              "icon": "ASSET.svg",
+              "program": [{
+                  "id": 437.0,
+                  "idx": 4.0,
+                  "text": "IV11040W-課稅別",
+                  "pg": "IV11040W",
+                  "node": null,
+                  "icon": "ASSET.svg",
+                  "type": "M"
+                },
+                {
+                  "id": 440.0,
+                  "idx": 7.0,
+                  "text": "IV11070W-海關通關註記",
+                  "pg": "IV11070W",
+                  "node": null,
+                  "icon": "ASSET.svg",
+                  "type": "M"
+                },
+                {
+                  "id": 4314.0,
+                  "idx": 3.0,
+                  "text": "IV11035W-電子發票配號維護",
+                  "pg": "IV11035W",
+                  "node": null,
+                  "icon": "ASSET.svg",
+                  "type": "M"
+                },
+                {
+                  "id": 436.0,
+                  "idx": 3.0,
+                  "text": "IV11030W-購買發票之號碼檔",
+                  "pg": "IV11030W",
+                  "node": null,
+                  "icon": "ASSET.svg",
+                  "type": "M"
+                },
+                {
+                  "id": 434.0,
+                  "idx": 1.0,
+                  "text": "IV11010W-格式代號",
+                  "pg": "IV11010W",
+                  "node": null,
+                  "icon": "ASSET.svg",
+                  "type": "M"
+                },
+                {
+                  "id": 438.0,
+                  "idx": 5.0,
+                  "text": "IV11050W-扣抵代號",
+                  "pg": "IV11050W",
+                  "node": null,
+                  "icon": "ASSET.svg",
+                  "type": "M"
+                },
+                {
+                  "id": 439.0,
+                  "idx": 6.0,
+                  "text": "IV11060W-彙加註記",
+                  "pg": "IV11060W",
+                  "node": null,
+                  "icon": "ASSET.svg",
+                  "type": "M"
+                },
+                {
+                  "id": 441.0,
+                  "idx": 8.0,
+                  "text": "IV11080W-徵收率",
+                  "pg": "IV11080W",
+                  "node": null,
+                  "icon": "ASSET.svg",
+                  "type": "M"
+                },
+                {
+                  "id": 435.0,
+                  "idx": 2.0,
+                  "text": "IV11020W-申報營業人稅籍編號",
+                  "pg": "IV11020W",
+                  "node": null,
+                  "icon": "ASSET.svg",
+                  "type": "M"
+                }
+              ]
+            },
+            {
+              "catogory": "Link with AFsys",
+              "id": 433.0,
+              "idx": 40.0,
+              "icon": "ASSET.svg",
+              "program": [{
+                  "id": 451.0,
+                  "idx": 1.0,
+                  "text": "IV41010W-接收國外收款資料",
+                  "pg": "IV41010W",
+                  "node": null,
+                  "icon": "ASSET.svg",
+                  "type": "M"
+                },
+                {
+                  "id": 452.0,
+                  "idx": 2.0,
+                  "text": "IV41020W-接收陽明代理UK運費資料",
+                  "pg": "IV41020W",
+                  "node": null,
+                  "icon": "ASSET.svg",
+                  "type": "M"
+                },
+                {
+                  "id": 453.0,
+                  "idx": 3.0,
+                  "text": "IV41030W-接收國內收款發票資料",
+                  "pg": "IV41030W",
+                  "node": null,
+                  "icon": "ASSET.svg",
+                  "type": "M"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "idx": 1600.0,
+          "moduleid": 464.0,
+          "moduleName": "總帳管理",
+          "icon": "ASSET.svg",
+          "function": [{
+              "catogory": "Query",
+              "id": 497.0,
+              "idx": 60.0,
+              "icon": "ASSET.svg",
+              "program": [{
+                  "id": 2953.0,
+                  "idx": 3.0,
+                  "text": "兩期差異變動分析表",
+                  "pg": "GL00114W",
+                  "node": null,
+                  "icon": "ASSET.svg",
+                  "type": "W"
+                },
+                {
+                  "id": 499.0,
+                  "idx": 2.0,
+                  "text": "會計科目查詢",
+                  "pg": "GL00116W",
+                  "node": null,
+                  "icon": "ASSET.svg",
+                  "type": "W"
+                },
+                {
+                  "id": 3033.0,
+                  "idx": 1.0,
+                  "text": "傳票明細查詢",
+                  "pg": "GL00111W",
+                  "node": null,
+                  "icon": "ASSET.svg",
+                  "type": "W"
+                }
+              ]
+            },
+            {
+              "catogory": "Operation for Vouchers",
+              "id": 465.0,
+              "idx": 10.0,
+              "icon": "ASSET.svg",
+              "program": [{
+                  "id": 473.0,
+                  "idx": 5.0,
+                  "text": "科目餘額比對",
+                  "pg": "GL00121W",
+                  "node": null,
+                  "icon": "ASSET.svg",
+                  "type": "W"
+                },
+                {
+                  "id": 854.0,
+                  "idx": 2.0,
+                  "text": "取消沖帳註記",
+                  "pg": "GL00120W",
+                  "node": null,
+                  "icon": "ASSET.svg",
+                  "type": "W"
+                }
+              ]
+            },
+            {
+              "catogory": "Evaluation",
+              "id": 467.0,
+              "idx": 30.0,
+              "icon": "ASSET.svg",
+              "program": [{
+                  "id": 882.0,
+                  "idx": 20.0,
+                  "text": "兌盈兌損明細查詢",
+                  "pg": "GL04003W",
+                  "node": null,
+                  "icon": "ASSET.svg",
+                  "type": "W"
+                },
+                {
+                  "id": 955.0,
+                  "idx": 40.0,
+                  "text": "評價用報表及兌盈兌損報表",
+                  "pg": "GL03001W",
+                  "node": null,
+                  "icon": "ASSET.svg",
+                  "type": "W"
+                }
+              ]
+            },
+            {
+              "catogory": "Report",
+              "id": 631.0,
+              "idx": 40.0,
+              "icon": "ASSET.svg",
+              "program": [{
+                  "id": 1733.0,
+                  "idx": 404.0,
+                  "text": "會計科目(4.7.9級)管理報表",
+                  "pg": "GL04102W",
+                  "node": null,
+                  "icon": "ASSET.svg",
+                  "type": "W"
+                },
+                {
+                  "id": 1933.0,
+                  "idx": 410.0,
+                  "text": "進/銷項營業稅報表(1825/2825)",
+                  "pg": "GL00102W",
+                  "node": null,
+                  "icon": "ASSET.svg",
+                  "type": "W"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "system": "ILIS",
+      "userId": "JENNIVINE.CY.CHEN"
+    },
+    "status": 100.0,
+    "message": "OK",
+    "messages": null,
+    "table": "UserController.GetUserPrograms",
+    "exception": null
+  }],
+  "I18n": [{
+      "id": 1,
+      "Message": {
+        "InternalServerError": "Internal Server Error"
+      },
+      "Text": {
+        "UserInfo": "Login Information",
+        "UserID": "Accounnt",
+        "UserName": "Name",
+        "Division": "Division",
+        "ExtenNumber": "Phone Number",
+        "Email": "Email",
+        "Success": "Success",
+        "Failed": "Failed",
+        "Cash": "Cash Management"
+      }
+    },
+    {
+      "id": 2,
+      "Message": {
+        "InternalServerError": "內部伺服器發生錯誤"
+      },
+      "Text": {
+        "UserInfo": "登入資訊",
+        "UserID": "帳號",
+        "UserName": "姓名",
+        "Division": "部門",
+        "ExtenNumber": "分機代碼",
+        "Email": "電子郵件",
+        "Success": "成功",
+        "Failed": "失敗",
+        "Cash": "現金管理模組"
+      }
+    }
+  ]
+}

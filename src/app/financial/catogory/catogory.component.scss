@@ -1,0 +1,101 @@
+$icon-box-width : 70%;
+$background-color: linear-gradient(to bottom, rgba(94,152,210,1) 0%,rgba(242,242,242,1) 100%);
+$item-size: 7vw;
+$item-min-size: 80px;
+
+.card-background {
+  background: $background-color;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+}
+
+.icon-box {
+  //以下抄襲GOOGLE的
+  -webkit-box-flex: 1;
+  -webkit-mask-clip: content-box;
+  box-sizing: border-box;
+  padding-left: 15%;
+  padding-right: 15%;
+  padding-top: 5%;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+}
+
+
+a {
+  display: inline-grid;
+}
+
+
+.login-container {
+  background: transparent none;
+  border: none;
+  box-shadow: none;
+  color: inherit;
+  font: inherit;
+  margin-left: 13px;
+  margin-right: 13px;
+  margin-top: 5px;
+  padding: 0;
+  position: fixed;
+  right: 0;
+  text-align: right;
+  top: 0;
+  z-index: 10;
+}
+
+.mat-card {
+  background-color: transparent;
+  box-shadow: none;
+  width: 7vw;
+  height:  9vw;
+  min-height:125px;
+  min-width: 80px;
+  margin: 20px;
+}
+
+.mat-card-image {
+  margin: 0 -24px 16px -24px;
+  width: $item-size;
+  height: $item-size;
+  min-height: $item-min-size;
+  min-width: $item-min-size;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.mat-card-content{
+  margin-top: -10px;
+  width: $item-size;
+  height: $item-size;
+  min-height: $item-min-size;
+  min-width: $item-min-size;
+}
+
+.icon-card {
+
+  box-shadow: 4px 4px 12px 4px rgba(20%, 20%, 40%, 0.5);
+  background-color: rgba(0, 0, 0, 0.21);
+  border-radius: 20px;
+  margin: 20px;
+  margin-bottom: 65px;
+}
+
+
+.mat-headline {
+  -webkit-transform : scale(0.75);
+  font-family: Verdana, 微軟正黑體;
+  color: #000;
+  font-size: 20px;
+  display: block;
+  width: $item-size;
+  min-width: $item-min-size;
+
+}
+
+.mat-card:not([class*=mat-elevation-z]) {
+  box-shadow: 0 0px;
+}
+

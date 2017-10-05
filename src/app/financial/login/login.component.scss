@@ -1,0 +1,47 @@
+.full-width {
+  width: 100%;
+}
+
+
+.login-box{
+  position: relative;
+  margin-top: 10%;
+  margin-bottom: 10%;
+  padding-left: 15%;
+  padding-right: 15%;
+  display: table;
+  width: 100%;
+}
+
+
+.login-logo{
+  width: 300px;
+  padding-left: 5vh;
+}
+
+.mat-card {
+  height: 100%;
+  width: 100%;
+  border-radius: 20px;
+  background-color: rgba(255, 255, 255, 0.9);
+
+}
+
+
+//電腦or螢幕比較大的設備
+@media  (min-width: 1200px){
+  .section {
+    padding-left: 22%;
+    padding-right: 22%;
+    width: 100%;
+  }
+  .login-logo{
+    width: 400px;
+    padding-left: 5vh;
+  }
+}
+
+
+.mat-card:not([class*=mat-elevation-z]) {
+  box-shadow: 5px 6px 15px black;
+}

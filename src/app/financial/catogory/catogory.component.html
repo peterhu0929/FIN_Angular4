@@ -1,0 +1,18 @@
+<div class="card-background"></div>
+<!--<div class="login-container">
+  <button mat-button (click)="Logout()">
+    <mat-icon>input</mat-icon>
+  </button>
+</div>-->
+
+<div class="icon-box">
+  <!--<a target="_blank" [routerLink]="['/main', item.moduleid]" *ngFor="let item of catogories">-->
+  <a [routerLink]="['/main', item.moduleid]" *ngFor="let item of catogories">
+    <mat-card>
+      <img mat-card-image src="{{'./assets/icon/' + item.icon}}">
+      <mat-card-content>
+        <p class="mat-headline"> {{item.moduleName}}</p>
+      </mat-card-content>
+    </mat-card>
+  </a>
+</div>

@@ -1,0 +1,6 @@
+﻿{ 
+"/api/Authentication":"/Authentication", 
+"/api/Authentication?module=ILIS&userId=jennivine.cy.chen&password=jennivine.cy.chen":"/Authentication/1", 
+"/api/User?userID=jennivine.cy.chen":"/User/1", 
+"/api/UserMenu?userId=JENNIVINE.CY.CHEN&module=ILIS":"/UserMenu/1" 
+}

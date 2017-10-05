@@ -1,0 +1,37 @@
+<kendo-grid [data]="view | async" [pageSize]="pageSize" [skip]="state.skip" [pageable]="true" [scrollable]="'true'" [filter]="state.filter"
+  [filterable]="true" (pageChange)="pageChange($event)" (dataStateChange)="dataStateChange($event)">
+  <ng-template kendoGridToolbarTemplate>
+    <button type="button" kendoGridExcelCommand><span class="k-icon k-i-file-excel"></span>Export to Excel</button>
+  </ng-template>
+  <kendo-grid-column field="IDCARD" title="證號" width="150">
+  </kendo-grid-column>
+  <kendo-grid-column field="SHARE_NUMBER" title="認股數" [filterable]="false" width="150">
+  </kendo-grid-column>
+  <kendo-grid-column field="EMPLOYEE_NAME" title="姓名" width="150">
+  </kendo-grid-column>
+  <kendo-grid-column field="RESIDENCE_ADDRESS" title="戶籍地址" width="250" [filterable]="false">
+  </kendo-grid-column>
+  <kendo-grid-column field="MAILING_ADDRESS" title="通訊地址" width="250" [filterable]="false">
+  </kendo-grid-column>
+  <kendo-grid-column field="PHONE_NUMBER" title="電話號碼" [filterable]="false" width="150">
+  </kendo-grid-column>
+  <kendo-grid-column field="FLEX3" title="生日" [filterable]="false" width="150">
+  </kendo-grid-column>
+  <kendo-grid-column field="TDCC_ID" title="集保帳號" [filterable]="false" width="150">
+  </kendo-grid-column>
+  <kendo-grid-column field="HEAD_OFFICE" title="總行代號" [filterable]="false" width="150">
+  </kendo-grid-column>
+  <kendo-grid-column field="BANK_ACCOUNT" title="銀行帳號" [filterable]="false" width="150">
+  </kendo-grid-column>
+  <kendo-grid-column field="COMPANY" title="公司別" [filterable]="false" width="150">
+  </kendo-grid-column>
+  <kendo-grid-column field="FACTORY" title="廠區別" [filterable]="false" width="150">
+  </kendo-grid-column>
+  <kendo-grid-column field="DEPT" title="部門別" [filterable]="false" width="150">
+  </kendo-grid-column>
+  <kendo-grid-column field="EMPLOYEEID" title="員工代號" [filterable]="false" width="150">
+  </kendo-grid-column>
+  <kendo-grid-column field="FLEX4" title="狀態" [filterable]="false" width="100">
+  </kendo-grid-column>
+  <kendo-grid-excel fileName="StockInformation.xlsx" [fetchData]="allData"></kendo-grid-excel>
+</kendo-grid>

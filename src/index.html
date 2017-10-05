@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Yang Ming ILIS</title>
+  <base href="/">
+
+  <link rel="icon" type="image/x-icon" href="./assets/icon/ym_icon.ico">
+  <link rel="icon" type="image/png" href="./assets/icon/ym_icon.ico" sizes="36x36">
+  <meta name="theme-color" content="#000000">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="./assets/css/spinkit.css" rel="stylesheet">
+  <link href="./assets/css/busy.css" rel="stylesheet">
+  <link href="./assets/css/w3.css"rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/core-js/2.4.1/core.js"></script>
+
+
+  <style type="text/css">
+    .loading {
+      background-color: #aedafc;
+      z-index: 9999;
+      position: fixed;
+      top: 0;
+      left: 0;
+      margin: auto;
+      width: 100vw;
+      height: 100vh;
+      perspective: 200px;
+    }
+
+    body {
+      margin: 100;
+      padding: 100;
+      background: url("assets/image/loginbg.png");
+      background-repeat: no-repeat;
+      -moz-background-size: cover;
+      background-size: cover;
+      background-attachment: fixed;
+    }
+
+  </style>
+
+</head>
+
+<body>
+  <app-root>
+    <div class="loading" style="padding:20%;text-align:center;">
+      <img src="assets/icon/Yang_Ming_Line.svg" width="400">
+      <div class="sk-double-bounce" align="center">
+        <div class="sk-child sk-double-bounce1"></div>
+        <div class="sk-child sk-double-bounce2"></div>
+      </div>
+    </div>
+  </app-root>
+  <script>
+    let culture = navigator.language;
+    let script = document.createElement("script");
+    script.type = "application/javascript";
+    script.src = "./assets/i18n/" + ((culture == "en-US" || culture == "zh-TW") ? culture : "en-US") + ".js";
+    document.body.appendChild(script);
+    console.log('navigator.language:' + navigator.language);
+  </script>
+</body>
+
+</html>

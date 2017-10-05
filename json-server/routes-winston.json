@@ -1,0 +1,10 @@
+{
+  "/api/Authentication":"/Authentication",
+  "/api/Authentication?module=ILIS&userId=a&password=a":"/Authentication/1",
+  "/api/User?userID=a":"/User/1",
+  "/api/UserMenu?userId=a&module=ILIS":"/UserMenu/1",
+  "/api/ILISSession/SetSessionData?userId=a&moudle=ILIS":"/ILISSession/1",
+  "/api/StockOptionEmployee/GridRead?page=1&pageSize=10&filter=F_KEY_NO~eq~1&$count=true":"/StockOptionEmployee",
+  "/api/StockOption/GridRead?page=1&pageSize=10&$count=true":"/StockOption",
+  "/api/StockOptionEmployee/GridRead?$count=true":"/StockOptionEmployee"
+}

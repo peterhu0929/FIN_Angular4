@@ -1,0 +1,117 @@
+// #container {
+//     padding:2em;
+//
+//     #list {
+//         padding:1em;
+//         display:block;
+//         background:#fff;
+//         margin-bottom:10px;
+//     }
+//
+//     button {
+//         border:none;
+//         margin-bottom:20px;
+//         padding:10px;
+//         background: blueviolet;
+//         color: #fff;
+//     }
+//
+//     .col {
+//         width:33%;
+//         display:inline-block;
+//         padding:40px 0;
+//         color:gray;
+//     }
+// }
+$app-toolbar-shadow: rgba(0, 0, 0, .3);
+$sidenav-shadow: rgba(0, 0, 0, .1);
+$sidenav-bkg-color: #fafafa;
+
+
+.app-toolbar {
+  box-shadow: 0 2px 5px 0 $app-toolbar-shadow;
+  left: 0;
+  padding: 0 16px 0 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 10;
+}
+
+
+
+.toolbar-logo {
+  margin-left: 20px;
+  margin-right: 30px;
+}
+
+.fill-remaining-space {
+  flex: 1 1 auto;
+}
+
+mat-sidenav-container.sidenav-container {
+  -webkit-transform: none;
+  height: auto !important;
+  margin: 0;
+  max-width: 100%;
+  min-height: 100%;
+  transform: none;
+}
+
+mat-sidenav-container.mat-sidenav-content {
+  height: auto;
+}
+
+.sidenav-container {
+  height: 100vh;
+  width: 100%;
+}
+
+mat-sidenav.mat-sidenav.sidenav {
+  background-color: $sidenav-bkg-color;
+  bottom: 0;
+  box-shadow: 6px 0 6px $sidenav-shadow;
+  height: calc(100vh - 64px);
+  left: 0;
+  min-width: 260px;
+  padding: 0;
+  position: fixed;
+  top: 64px;
+}
+
+mat-sidenav.mat-sidenav.sidenavRight {
+  background-color:$sidenav-bkg-color;
+  //opacity: 0.7;
+  bottom: 0;
+  box-shadow: 6px 0 6px $sidenav-shadow;
+  height: calc(100vh - 64px);
+  right: 0;
+  min-width: 260px;
+  padding: 0;
+  position: fixed;
+  top: 64px;
+}
+
+.sidenav-content {
+  min-height: 100vh;
+  padding: 80px 3rem 1rem;
+}
+
+mat-card {
+  margin: 15px;
+}
+
+.l-sub-section {
+  color: #333;
+  background-color: #e2effb;
+  // border-left: 4px solid #E8E6E6;
+  padding: 3px;
+  margin-bottom: 8px;
+  display: table;
+  clear: both;
+  width: 100%;
+  box-sizing: border-box;
+}
+/* You can add global styles to this file, and also import other style files */
+
+

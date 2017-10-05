@@ -1,0 +1,121 @@
+<div>
+
+  <h4><strong> 針對本次現金增資認購作業，提出以下說明：</strong></h4>
+  <h5> 1. 員工認購價格與股票劃撥日市價之價差需計入 <span style="color:#1E90FF;">{{(data.stockOption.PAYMENT_PERIOD_FROM | date:'y' ) - 1911}}</span>    年度個人薪資所得。 </h5>
+  <h5> 2. 繳款期間預計於 <span style="color:#1E90FF;">{{(data.stockOption.PAYMENT_PERIOD_FROM | date:'y' ) - 1911}} 年 {{data.stockOption.PAYMENT_PERIOD_FROM | date:'M'}} 月 {{data.stockOption.PAYMENT_PERIOD_FROM | date:'d' }} 日 ~
+        {{(data.stockOption.PAYMENT_PERIOD_TO | date:'y' ) - 1911 }}  年 {{data.stockOption.PAYMENT_PERIOD_TO | date:'M' }} 月 {{data.stockOption.PAYMENT_PERIOD_TO | date:'d' }} 日 </span>，預計於
+    <span style="color:#1E90FF;">11 月底 </span>撥入認購人集保帳戶（實際作業時間以主管機關核定及股務作業為準）。</h5>
+  <h5> 3. 請提供下列資料，以利後續作業。 </h5>
+
+  <!-- <form   [formGroup]="userForm" #userForm = "ngForm"  class="example-form" (ngSubmit)="confirm(userForm.value)""> -->
+  <form #userForm="ngForm" class="example-form">
+    <mat-card>
+      <table class="example-full-width" cellspacing="0">
+        <tr>
+          <td>
+            <mat-form-field class="example-full-width">
+              <input matInput placeholder="身分證字號" disabled value="{{data.stockOptionEmployee.IDCARD}}">
+            </mat-form-field>
+          </td>
+        </tr>
+      </table>
+
+      <div>
+
+        <mat-input-container class="full-width">
+          <input matInput placeholder="聯絡電話" [(ngModel)]="data.stockOptionEmployee.PHONE_NUMBER" [ngModelOptions]="{standalone: true}"
+            required minlength="3" #PHONE_NUMBERRef="ngModel" onkeypress='return event.charCode >= 48 && event.charCode <= 57'>
+        </mat-input-container>
+
+        <div *ngIf="PHONE_NUMBERRef.errors && (PHONE_NUMBERRef.dirty || PHONE_NUMBERRef.touched)" class="alert alert-danger">
+          <div [hidden]="!PHONE_NUMBERRef.errors.required">
+            請輸入聯絡電話。
+          </div>
+          <div [hidden]="!PHONE_NUMBERRef.errors.minlength">
+            聯絡電話過短。
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <mat-form-field class="example-full-width">
+          <input matInput placeholder="出生年月日" [(ngModel)]="data.stockOptionEmployee.FLEX3" disabled [ngModelOptions]="{standalone: true}">
+        </mat-form-field>
+      </div>
+
+      <div>
+        <mat-form-field class="example-full-width">
+          <input matInput placeholder="通信地址郵遞區號" [(ngModel)]="data.stockOptionEmployee.MAILING_POST_CODE" [ngModelOptions]="{standalone: true}"
+            required minlength="3" maxlength="3" #MAILING_POST_CODERef="ngModel" pattern="^[0-9]{3}$">
+        </mat-form-field>
+        <div *ngIf="MAILING_POST_CODERef.errors && (MAILING_POST_CODERef.dirty || MAILING_POST_CODERef.touched)" class="alert alert-danger">
+          <div [hidden]="!MAILING_POST_CODERef.errors.required">
+            請輸入通信地址郵遞區。
+          </div>
+          <div [hidden]="!MAILING_POST_CODERef.errors.minlength">
+            請輸入3碼郵遞區號。
+          </div>
+          <div [hidden]="!MAILING_POST_CODERef.errors.pattern">
+            郵遞區號應為數字。
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <mat-form-field [ngStyle]="{'width': '100%'}">
+          <input matInput placeholder="通信地址" [(ngModel)]="data.stockOptionEmployee.MAILING_ADDRESS" [ngModelOptions]="{standalone: true}"
+            required minlength="3" #MAILING_ADDRESSRef="ngModel">
+        </mat-form-field>
+        <div *ngIf="MAILING_ADDRESSRef.errors && (MAILING_ADDRESSRef.dirty || MAILING_ADDRESSRef.touched)" class="alert alert-danger">
+          <div [hidden]="!MAILING_ADDRESSRef.errors.required">
+            請輸入通信地址。
+          </div>
+          <div [hidden]="!MAILING_ADDRESSRef.errors.minlength">
+            通信地址資料過短。
+          </div>
+        </div>
+      </div>
+
+      <p>
+        股票劃撥入帳之集保帳號(共11碼),並請提供集保存摺封面影本。
+      </p>
+      <image-upload mat-raised-button (onFileUploadFinish)="imageUploaded($event)" [max]="100" [preview]="false" [maxFileSize]="2147483648"
+        [extensions]="['jpg','png','jpeg','pdf']" [buttonCaption]="'上傳集保存摺封面影本( jpg; png; jpeg; pdf)'" [fileTooLargeMessage]="'檔案太大!'"></image-upload>
+      <div>
+        <mat-form-field class="example-full-width">
+          <input matInput placeholder="股票劃撥入帳之集保帳號" [(ngModel)]="data.stockOptionEmployee.TDCC_ID" [ngModelOptions]="{standalone: true}"
+            required minlength="11" maxlength="11" #TDCC_IDRef="ngModel" pattern="^[a-zA-Z0-9]{11}$">
+        </mat-form-field>
+
+        <div *ngIf="TDCC_IDRef.errors && (TDCC_IDRef.dirty || TDCC_IDRef.touched)" class="alert alert-danger">
+          <div [hidden]="!TDCC_IDRef.errors.required">
+            請輸入股票劃撥入帳之集保帳號。
+          </div>
+          <div [hidden]="!TDCC_IDRef.errors.minlength">
+            請輸入11碼集保帳號。
+          </div>
+          <div [hidden]="!TDCC_IDRef.errors.pattern">
+            集保帳號格式錯誤。
+          </div>
+        </div>
+
+      </div>
+    </mat-card>
+
+    <div>
+
+      <button mat-raised-button (click)="prevstep()">上一步</button>
+      <!-- <button checkexpiredate()  || [disabled]="!userForm.form.valid" mat-raised-button type="submit" class="btn btn-primary"  (click)="confirm()"> 確認 </button> -->
+      <button [disabled]="checkexpiredate()" mat-raised-button type="submit" class="btn btn-primary" (click)="confirm()"> 送出 </button>
+
+    </div>
+
+    認購股數: {{data.stockOptionEmployee.SHARE_NUMBER}} 。
+    <span style="color: red">
+    <h5>備註1：員工本人若無集保帳戶者，無法參與本次現金增資認購。</h5>
+    <h5>備註2：員工若因故無法提供集保存摺封面影本或相關證明，且集保帳號填寫有誤，導致現金增資普通股無法匯入員工集保帳戶，屆時需請員工親自至台北市重慶南路凱基證券股代部辦理股票重新撥戶作業。因重新撥戶之作業時程較長，須自行承擔股價變動風險。</h5>
+    </span>
+  </form>
+
+
+</div>
